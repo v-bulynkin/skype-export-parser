@@ -29,7 +29,7 @@ foreach ($ID in $IDs) {
         $msgMediaPath = 'file:///' + "$rootFolder\media\$($msgMediaFile.basename).$msgMediaExt"
             
             if ($sorting -eq 1) {
-            Copy-Item "$($msgMediaFile.fullname)" "$rootFolder\$IDdisplayName\$(($msg.timestamp).tostring("yyyy-MM-dd hh-mm-ss")) $IDdisplayName.$msgMediaExt" -ErrorAction SilentlyContinue
+            Copy-Item "$($msgMediaFile.fullname)" "$rootFolder\$IDdisplayName\$(($msg.timestamp).tostring("yyyy-MM-dd HH-mm-ss")) $IDdisplayName.$msgMediaExt" -ErrorAction SilentlyContinue
             }
     
             # Image or video
