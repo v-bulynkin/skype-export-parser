@@ -5,7 +5,7 @@ In the new Skype versions the only way to export threads is demanding export of 
 
 After the data has been downloaded and extracted to a folder you find you cannot view it conveniently with local media files even if you use the [official Skype parser](https://go.skype.com/skype-parser).
 
-Moreover, it is impossible to detect which files belong to which threads in the **media** subfolder.
+Moreover, it is impossible to be seen which files belong to which threads in the **media** subfolder.
 
 ## What this script do
 This Powershell script tries to resolve these problems.
