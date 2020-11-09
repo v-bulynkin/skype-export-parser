@@ -32,7 +32,7 @@ Type 1 and press enter if you accept. To refuse, press enter.
 ### This is how the data export folder looks after the work is completed
 ![pic1](https://github.com/v-bulynkin/skype-export-parser/blob/main/pics/skype-export-parser1.png)<br>
 
-HTML files are threads. Folders with the same names contains extracted media files belongs to those threads.
+HTML files are threads. Folders with the same names contain extracted media files belongs to those threads.
 
 ### HTML file opened in browser
 ![pic2](https://github.com/v-bulynkin/skype-export-parser/blob/main/pics/skype-export-parser2.png)
