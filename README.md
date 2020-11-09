@@ -25,7 +25,7 @@ Type 1 and press enter if you accept. To refuse, press enter.
 
 ## Precautions
 - Make sure you have enough free space on your disk because media files are copying during the process.
-- This script has been tested only on Windows 10 with Powershell 5.1 and only on one Skype export dump. Use Powershell 4 and newer.
+- This script has been tested only on Windows 10 with Powershell 5.1 and only on one Skype export dump. Use Powershell 4 or newer.
 - All links inside HTML files are absolute, so if you move your Skype exported folder to another place, restart the script to renew HTML files (or search&replace links using any text editor if you know what I am talking about).
 
 ## Pictures
