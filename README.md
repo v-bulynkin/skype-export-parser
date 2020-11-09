@@ -18,7 +18,7 @@ Optionally, it is possible to sort media files by separate folders and to rename
 The script asks two questions:
 
 **1. Where are the main Skype export data folder?**<br>
-Enter the full path like D:\Downloads\skype-export. In this folder you should have a **messages.json** file and a **media** folder.
+Enter the full path like D:\Downloads\skype-export. In this folder you should have a **messages.json** file and a **media** subfolder.
 
 **2. Do you want to sort media files by threads and rename them?**<br>
 Type 1 and press enter if you accept. To refuse, press enter.
