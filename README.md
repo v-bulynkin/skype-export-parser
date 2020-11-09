@@ -14,6 +14,15 @@ It forms local HTML files for each thread where local pictures and videos are li
 
 Optionally, it is possible to sort media files to separate folders and to rename those files by dates and thread names.
 
+## How it works
+The script asks two questions:
+
+**1. Where are the main Skype export data folder?**<br>
+Enter the full path like D:\Downloads\skype-export. In this folder you should have a **messages.json** file and a **media** folder.
+
+**2. Do you want to sort media files by threads and rename them?**<br>
+Type 1 and press enter if you accept. To refuse, press enter.
+
 ## Precautions
 - Make sure you have enough free space on your disk because media files are copied during the process.
 - This script has been tested only on Windows 10 with Powershell 5.1 and only on one Skype export dump.
