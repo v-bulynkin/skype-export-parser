@@ -1,7 +1,7 @@
 # Skype export parser
 
 ## Description of problems
-In the new Skype versions the only way to export threads is demanding export of your data at [Skype data export page](https://secure.skype.com/en/data-export).
+In new Skype versions the only way to export threads is demanding export of your data at [Skype data export page](https://secure.skype.com/en/data-export).
 
 After the data has been downloaded and extracted to a folder you find you cannot view it conveniently with local media files even if you use the [official Skype parser](https://go.skype.com/skype-parser).
 
