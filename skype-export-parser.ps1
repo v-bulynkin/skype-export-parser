@@ -26,7 +26,7 @@ foreach ($ID in $IDs) {
         $msgMediaFile = $msgMedia |sort length |select -last 1
         # copy (not rename because you may need to start this script again)
         copy "$($msgMediaFile.fullname)" "$rootFolder\media\$($msgMediaFile.basename).$msgMediaExt" -ErrorAction SilentlyContinue
-        $msgMediaPath = 'file:///' + "$rootFolder\media\$($msgMediaFile.basename).$msgMediaExt"
+        $msgMediaPath = "media\$($msgMediaFile.basename).$msgMediaExt"
             
             if ($sorting -eq 1) {
             Copy-Item "$($msgMediaFile.fullname)" "$rootFolder\$IDdisplayName\$(($msg.timestamp).tostring("yyyy-MM-dd HH-mm-ss")) $IDdisplayName.$msgMediaExt" -ErrorAction SilentlyContinue
