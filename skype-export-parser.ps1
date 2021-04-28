@@ -1,4 +1,7 @@
+# source folder
 $rootFolder = (read-host "Enter the Skype exported files folder path").trim() -replace "\\+$"
+# Time offset (all messages in Skype export have UTC timestamps so they need to be converted)
+$tz = (read-host "Enter your UTC offset, for example, 2.5 or -1. It should be decimal (i.e., -3:30 = -3.5, +8:45 = 8.75). For UTC itself enter 0 or nothing").trim()
 $mediaFolder = dir "$rootFolder\media"
 # sort messages by time ascending
 $messages = (gc "$rootFolder\messages.json" -Encoding UTF8 |ConvertFrom-Json).conversations.messagelist |sort id
@@ -9,7 +12,9 @@ $sorting = Read-Host "Type 1 and press enter if you want to sort media files and
 
 foreach ($ID in $IDs) {
     # Exclude message service types, get timestamp string
-    $thread = $messages |? {$_.conversationid -eq "$ID" -and $_.messagetype -match 'text'} |select *,@{n='timestamp';e={$_.originalarrivaltime -as [datetime]}}
+    $thread = $messages |? {$_.conversationid -eq "$ID" -and $_.messagetype -match 'text'} |select *,
+    @{n='timestamp';e={if ($tz) {($_.originalarrivaltime -as [datetime]).addhours($tz)} else {$_.originalarrivaltime -as [datetime]}}}
+
 
     $IDdisplayName = $thread.displayname |sort -Unique
     Write-Host -fore Green "Processing thread with $IDdisplayName..."
