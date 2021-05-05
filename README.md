@@ -6,28 +6,19 @@ After the data has been downloaded and extracted to a folder you find you cannot
 
 Moreover, it is impossible to be seen which files belong to which threads in the **media** subfolder.
 
-## What this script do
-This Powershell script tries to resolve these problems.
+## What this script does
+It forms local HTML files for all Skype threads where local pictures and videos are linked and shown in a browser.
 
-It forms a local HTML file for each thread where local pictures and videos are linked and shown in a browser.
-
-Optionally, it is possible to sort media files by separate folders and to rename those files by dates and thread names.
+It sorts media files by separating folders and renaming those files by dates and thread names.
 
 ## How it works
-The script asks three questions:
+The script asks where your export folder locates. This folder must contain a **messages.json** file and a **media** subfolder.
 
-**1. Where is the main Skype export data folder?**<br>
-Enter the full path like D:\Downloads\skype-export. In this folder you should have a **messages.json** file and a **media** subfolder.
-
-**2. What is your UTC time offset?**<br>
-It is necessary for messages' timestamps conversion, because those timestamps are all in UTC in the Skype export dump. You need to specify the offset in decimal value, e. g. +1:30 should be entered as 1.5, -8:45 as -8.75, etc.
-
-**3. Do you want to sort media files by threads and rename them?**<br>
-Type 1 and press enter if you accept. To refuse, press enter.
+Since messages' timestamps in Skype export dumps are in UTC, the script converts them according to the timezone shift on your local computer.
 
 ## Precautions
 - Make sure you have enough free space on your disk because media files are copying during the process.
-- This script has been tested only on Windows 10 with Powershell 5.1 and only on one Skype export dump. Use Powershell 4 or newer.
+- This script has been tested only on Windows 10 with Powershell 5.1 and 7.1.3 and only on one Skype export dump. Anyway, use Powershell 4 or newer.
 - All links to media files inside HTML files are relative and point out to **media** subfolder.
 
 ## Pictures
