@@ -3,7 +3,7 @@ $rootFolder = (read-host "Enter the Skype exported files folder path").trim() -r
 # Time offset (all messages in Skype export have UTC timestamps so they need to be converted)
 $tz = Get-TimeZone
 if ($tz.BaseUtcOffset.TotalMinutes -ne 0) {
-    Write-Host -fore Magenta "Messages timestamps will be recalculated to your timezone:`n$($tz.displayname)."
+    Write-Host -fore Magenta "Messages' timestamps will be recalculated to your timezone:`n$($tz.displayname)."
 }
 $mediaFolder = dir "$rootFolder\media"
 # sort messages by time ascending
