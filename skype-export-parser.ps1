@@ -20,7 +20,8 @@ foreach ($ID in $IDs) {
 
     mkdir "$rootFolder\$IDdisplayName" -ErrorAction SilentlyContinue > $null
 
-    $threadHtml = foreach ($msg in $thread) {
+    $threadHtml = ,"<title>$IDdisplayName</title>"
+    $threadHtml += foreach ($msg in $thread) {
         # Is there media content and is it presented locally
         if ($msg.amsreferences -and $mediaFolder -match $msg.amsreferences) {
         $msgMediaJson,$msgMedia = ($mediaFolder -match $msg.amsreferences).where({$_.extension -eq '.json'}, 'split')
